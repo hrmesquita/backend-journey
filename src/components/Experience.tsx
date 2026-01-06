@@ -29,7 +29,7 @@ const Experience = () => {
     <section id="experience" className="section-padding bg-card">
       <div className="container-narrow">
         <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4 opacity-0 animate-fade-in">
-          Experience
+          <span className="text-primary">Experience</span>
         </h2>
         <p className="text-muted-foreground mb-12 max-w-2xl opacity-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
           Where I've been shaping systems and shipping code.

@@ -7,11 +7,11 @@ const Hero = () => {
       <div className="container-narrow">
         <div className="grid md:grid-cols-[1fr,auto] gap-12 md:gap-16 items-center">
           <div className="order-2 md:order-1 opacity-0 animate-fade-in">
-            <p className="text-subheading text-sm tracking-widest uppercase mb-4">
+            <p className="text-primary text-sm tracking-widest uppercase mb-4 font-medium">
               Software Engineer
             </p>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-6">
-              Hugo Mesquita
+              Hugo <span className="text-primary">Mesquita</span>
             </h1>
             <p className="text-foreground/80 text-lg md:text-xl leading-relaxed max-w-xl mb-8">
               Backend engineer with ~3 years crafting high-performance distributed systems. 
@@ -68,7 +68,7 @@ const Hero = () => {
           
           <div className="order-1 md:order-2 opacity-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <div className="relative group">
-              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-section-divider shadow-lg mx-auto md:mx-0 transition-transform duration-500 group-hover:scale-105">
+              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/30 shadow-lg shadow-primary/10 mx-auto md:mx-0 transition-transform duration-500 group-hover:scale-105">
                 <img 
                   src={profilePhoto} 
                   alt="Hugo Mesquita" 

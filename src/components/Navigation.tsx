@@ -21,12 +21,8 @@ const Navigation = () => {
       }`}
     >
       <div className="container-narrow">
-        <div className="flex items-center justify-end">
-          <nav 
-            className={`hidden sm:flex items-center gap-6 transition-all duration-700 ease-out ${
-              scrolled ? "translate-x-[calc(50vw-50%-1.5rem)]" : "translate-x-0"
-            }`}
-          >
+        <div className="flex items-center justify-center">
+          <nav className="hidden sm:flex items-center gap-6">
             <a href="#experience" className="text-sm text-muted-foreground hover:text-heading transition-colors relative group">
               Experience
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -62,7 +58,7 @@ const Navigation = () => {
             </div>
           </nav>
 
-          <div className="sm:hidden flex items-center gap-3 ml-auto">
+          <div className="sm:hidden flex items-center gap-3">
             <a 
               href="https://linkedin.com/in/your-linkedin" 
               target="_blank"

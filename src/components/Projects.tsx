@@ -19,7 +19,7 @@ const Projects = () => {
     <section id="projects" className="section-padding bg-card">
       <div className="container-narrow">
         <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4 opacity-0 animate-fade-in">
-          Projects
+          <span className="text-primary">Projects</span>
         </h2>
         <p className="text-muted-foreground mb-12 max-w-2xl opacity-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
           Side projects and experiments outside of work.
@@ -49,10 +49,9 @@ const Projects = () => {
                 {project.tech.map((tech, tIndex) => (
                   <span 
                     key={tIndex}
-                    className="text-xs font-mono text-muted-foreground"
+                    className="text-xs font-mono text-primary/70 bg-primary/5 px-2 py-1 rounded"
                   >
                     {tech}
-                    {tIndex !== project.tech.length - 1 && <span className="ml-2 text-border">·</span>}
                   </span>
                 ))}
               </div>
