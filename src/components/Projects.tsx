@@ -29,7 +29,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <article 
               key={index}
-              className={`group p-6 rounded-lg border border-border bg-background hover:border-primary/30 transition-all duration-300 opacity-0 animate-fade-in ${project.placeholder ? 'opacity-60' : ''}`}
+              className={`group p-6 rounded-lg border border-border bg-background hover:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fade-in ${project.placeholder ? 'opacity-60' : ''}`}
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
               <div className="flex items-start justify-between mb-3">

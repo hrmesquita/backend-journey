@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Github, Linkedin } from "lucide-react";
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -13,41 +14,86 @@ const Navigation = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled 
-          ? "bg-background/90 backdrop-blur-md border-b border-section-divider py-4" 
+          ? "bg-background/90 backdrop-blur-md border-b border-section-divider py-3" 
           : "bg-transparent py-6"
       }`}
     >
-      <div className="container-narrow flex items-center justify-between">
-        <a href="#" className="font-serif text-xl font-medium text-heading hover:text-primary transition-colors">
-          HM
-        </a>
-        
-        <nav className="hidden sm:flex items-center gap-8">
-          <a href="#experience" className="text-sm text-muted-foreground hover:text-heading transition-colors">
-            Experience
-          </a>
-          <a href="#skills" className="text-sm text-muted-foreground hover:text-heading transition-colors">
-            Skills
-          </a>
-          <a href="#projects" className="text-sm text-muted-foreground hover:text-heading transition-colors">
-            Projects
-          </a>
+      <div className={`transition-all duration-500 ${
+        scrolled ? "max-w-xl mx-auto px-6" : "container-narrow"
+      }`}>
+        <div className={`flex items-center transition-all duration-500 ${
+          scrolled ? "justify-center" : "justify-between"
+        }`}>
           <a 
-            href="mailto:hrainhamesquita@gmail.com" 
-            className="text-sm font-medium text-primary hover:text-link-hover transition-colors"
+            href="#" 
+            className={`font-serif text-xl font-medium text-heading hover:text-primary transition-all duration-500 ${
+              scrolled ? "opacity-0 w-0 overflow-hidden" : "opacity-100"
+            }`}
           >
-            Contact
+            HM
           </a>
-        </nav>
+          
+          <nav className={`hidden sm:flex items-center transition-all duration-500 ${
+            scrolled ? "gap-6" : "gap-8"
+          }`}>
+            <a href="#experience" className="text-sm text-muted-foreground hover:text-heading transition-colors relative group">
+              Experience
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+            </a>
+            <a href="#skills" className="text-sm text-muted-foreground hover:text-heading transition-colors relative group">
+              Skills
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+            </a>
+            <a href="#projects" className="text-sm text-muted-foreground hover:text-heading transition-colors relative group">
+              Projects
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+            </a>
+            
+            <div className="flex items-center gap-3 ml-2">
+              <a 
+                href="https://linkedin.com/in/your-linkedin" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={18} />
+              </a>
+              <a 
+                href="https://github.com/your-github" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                aria-label="GitHub"
+              >
+                <Github size={18} />
+              </a>
+            </div>
+          </nav>
 
-        <a 
-          href="mailto:hrainhamesquita@gmail.com" 
-          className="sm:hidden text-sm font-medium text-primary hover:text-link-hover transition-colors"
-        >
-          Contact
-        </a>
+          <div className="sm:hidden flex items-center gap-3">
+            <a 
+              href="https://linkedin.com/in/your-linkedin" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={20} />
+            </a>
+            <a 
+              href="https://github.com/your-github" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="GitHub"
+            >
+              <Github size={20} />
+            </a>
+          </div>
+        </div>
       </div>
     </header>
   );
