@@ -47,7 +47,7 @@ const Navigation = () => {
                 <Linkedin size={18} />
               </a>
               <a 
-                href="https://https://github.com/hrmesquita" 
+                href="https://github.com/hrmesquita" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
@@ -69,7 +69,7 @@ const Navigation = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="https://https://github.com/hrmesquita" 
+              href="https://github.com/hrmesquita" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
