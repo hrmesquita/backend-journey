@@ -23,7 +23,7 @@ const Footer = () => {
               <Mail size={20} />
             </a>
             <a 
-              href="https://linkedin.com/in/your-linkedin"
+              href="https://www.linkedin.com/in/hrainhamesquita/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-12 h-12 bg-card border border-border text-foreground rounded-full hover:border-primary hover:text-primary transition-all duration-300 hover:scale-110 hover:-translate-y-1"
@@ -32,7 +32,7 @@ const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="https://github.com/your-github"
+              href="https://github.com/hrmesquita"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-12 h-12 bg-card border border-border text-foreground rounded-full hover:border-primary hover:text-primary transition-all duration-300 hover:scale-110 hover:-translate-y-1"
