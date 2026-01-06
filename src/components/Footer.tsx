@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <div>
             <h2 className="font-serif text-2xl md:text-3xl font-medium mb-2 text-heading">
-              Let's connect
+              Let's <span className="text-primary">connect</span>
             </h2>
             <p className="text-muted-foreground">
               Open to discussing new opportunities and interesting projects.
