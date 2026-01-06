@@ -31,7 +31,7 @@ const Education = () => {
           {education.map((item, index) => (
             <div 
               key={index}
-              className="p-5 rounded-lg border border-border bg-card hover:border-primary/30 transition-colors opacity-0 animate-fade-in"
+              className="p-5 rounded-lg border border-border bg-card hover:border-primary/30 hover:shadow-md hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fade-in"
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
               <span className="text-xs font-mono text-primary mb-2 block">

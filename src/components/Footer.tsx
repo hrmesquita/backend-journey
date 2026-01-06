@@ -1,3 +1,5 @@
+import { Github, Linkedin, Mail } from "lucide-react";
+
 const Footer = () => {
   return (
     <footer className="py-16 border-t border-section-divider">
@@ -12,16 +14,31 @@ const Footer = () => {
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex items-center gap-4">
             <a 
               href="mailto:hrainhamesquita@gmail.com"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center justify-center w-12 h-12 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+              aria-label="Email"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect width="20" height="16" x="2" y="4" rx="2"/>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-              </svg>
-              <span>Send an email</span>
+              <Mail size={20} />
+            </a>
+            <a 
+              href="https://linkedin.com/in/your-linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-12 h-12 bg-card border border-border text-foreground rounded-full hover:border-primary hover:text-primary transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={20} />
+            </a>
+            <a 
+              href="https://github.com/your-github"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-12 h-12 bg-card border border-border text-foreground rounded-full hover:border-primary hover:text-primary transition-all duration-300 hover:scale-110 hover:-translate-y-1"
+              aria-label="GitHub"
+            >
+              <Github size={20} />
             </a>
           </div>
         </div>

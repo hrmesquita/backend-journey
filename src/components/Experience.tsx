@@ -48,7 +48,7 @@ const Experience = () => {
               )}
               
               {/* Timeline dot */}
-              <div className="absolute left-0 top-2 w-[15px] h-[15px] rounded-full bg-timeline-dot border-4 border-background" />
+              <div className="absolute left-0 top-2 w-[15px] h-[15px] rounded-full bg-timeline-dot border-4 border-background transition-transform duration-300 hover:scale-125" />
               
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-3">
                 <div>

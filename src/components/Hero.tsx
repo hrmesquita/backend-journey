@@ -1,4 +1,5 @@
 import profilePhoto from "@/assets/profile-photo.jpg";
+import { Github, Linkedin } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -20,29 +21,62 @@ const Hero = () => {
               Based in Porto, Portugal. Currently focused on Java-based architectures, 
               system performance optimization, and cloud-native infrastructure.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap items-center gap-6">
               <a 
                 href="mailto:hrainhamesquita@gmail.com" 
-                className="inline-flex items-center gap-2 text-primary hover:text-link-hover transition-colors font-medium"
+                className="inline-flex items-center gap-2 text-primary hover:text-link-hover transition-colors font-medium group"
               >
                 <span>Get in touch</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                >
                   <path d="M5 12h14m-7-7 7 7-7 7"/>
                 </svg>
               </a>
+              
+              <div className="flex items-center gap-4">
+                <a 
+                  href="https://linkedin.com/in/your-linkedin" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 hover:-translate-y-0.5"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={22} />
+                </a>
+                <a 
+                  href="https://github.com/your-github" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110 hover:-translate-y-0.5"
+                  aria-label="GitHub"
+                >
+                  <Github size={22} />
+                </a>
+              </div>
             </div>
           </div>
           
           <div className="order-1 md:order-2 opacity-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <div className="relative">
-              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-section-divider shadow-lg mx-auto md:mx-0">
+            <div className="relative group">
+              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-section-divider shadow-lg mx-auto md:mx-0 transition-transform duration-500 group-hover:scale-105">
                 <img 
                   src={profilePhoto} 
                   alt="Hugo Mesquita" 
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-primary/10 rounded-full -z-10" />
+              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-primary/10 rounded-full -z-10 transition-all duration-500 group-hover:scale-125 group-hover:bg-primary/15" />
+              <div className="absolute -top-4 -left-4 w-12 h-12 bg-primary/5 rounded-full -z-10 transition-all duration-700 group-hover:scale-150" />
             </div>
           </div>
         </div>
