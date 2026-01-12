@@ -43,21 +43,10 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-section-divider flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-section-divider text-center">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Hugo Mesquita. Porto, Portugal.
           </p>
-          <nav className="flex items-center gap-6">
-            <a href="#experience" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Experience
-            </a>
-            <a href="#skills" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Skills
-            </a>
-            <a href="#projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Projects
-            </a>
-          </nav>
         </div>
       </div>
     </footer>
