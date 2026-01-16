@@ -3,8 +3,8 @@ const experiences = [
     company: "Indra via CodeWin",
     role: "Software Engineer",
     period: "Jun 2024 — Present",
-    description: "Built backend services for a port logistics management platform using Java and Spring Boot, integrating external client APIs and exposing REST endpoints. Implemented end-to-end backend features, including data ingestion, transformation, persistence, and API design.",
     highlights: [
+      "Built backend services for a port logistics management platform using Java and Spring Boot, integrating external client APIs and exposing REST endpoints. Implemented end-to-end backend features, including data ingestion, transformation, persistence, and API design.",
       "Contributed to QA-driven release cycles with frequent deployments, prioritizing code readability, maintainability, and test coverage (>85%)",
       "Collaborated with analysts and client teams to ensure correct integration and data handling",
     ],
@@ -13,11 +13,11 @@ const experiences = [
     company: "Critical TechWorks",
     role: "Software Engineer",
     period: "Mar 2023 — Mar 2024",
-    description: "Designed and implemented a high-throughput Quarkus microservice for inter-service communication in a distributed platform.",
     highlights: [
+      "Designed and implemented a high-throughput Quarkus microservice for inter-service communication in a distributed platform.",
+      "Designed and implemented a nested set (tree) data model to efficiently store and query hierarchical JSON data, optimizing read performance for complex tree-based queries",
       "Implemented asynchronous validation and persistence workflows to reduce blocking operations and improve responsiveness",
       "Benchmarked JSON deserialization approaches and identified a ~32% performance difference in micro-benchmarks, contributing to performance-informed design decisions",
-      "Designed data ingestion logic that parsed and persisted hierarchical JSON structures for efficient querying and downstream processing",
       "Built CI/CD pipelines with Docker and Jenkins, ensuring >85% test coverage via automated unit and integration tests",
       "Deployed and operated services in a multi-environment Kubernetes setup (test / int / prod), collaborating closely with QA, PM, and UX",
     ],
@@ -61,10 +61,6 @@ const Experience = () => {
                   {exp.period}
                 </span>
               </div>
-              
-              <p className="text-foreground/80 mb-4 leading-relaxed">
-                {exp.description}
-              </p>
               
               <ul className="space-y-2">
                 {exp.highlights.map((highlight, hIndex) => (
