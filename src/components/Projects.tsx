@@ -6,13 +6,52 @@ const projects = [
     tech: ["Next.js", "Python", "Email Integration"],
   },
   {
-    title: "Project TBD",
-    year: "Coming Soon",
-    description: "More projects in the works. Check back soon for updates on what I'm building.",
-    tech: ["To be announced"],
-    placeholder: true,
+    title: "Rust Web Scraper",
+    year: "Archived",
+    description: "CLI web scraper in Rust that retrieves the cheapest product for a search term from a price-comparison site (undisclosed). Not actively maintained.",
+    tech: ["Rust", "Cargo", "Web Scraping", "CLI"],
   },
 ];
+
+const nestedSetExample = {
+  title: "Nested set tree model",
+  subtitle: "Hierarchy indexed for fast subtree reads",
+  tree: [
+    "Root (1,30)",
+    "|-- Orders (2,15)",
+    "|   |-- EU (3,8)",
+    "|   |   |-- Order 1 (4,5)",
+    "|   |   `-- Order 2 (6,7)",
+    "|   `-- US (9,14)",
+    "|       |-- Order 1 (10,11)",
+    "|       `-- Order 2 (12,13)",
+    "`-- Returns (16,29)",
+    "    |-- Open (17,22)",
+    "    |   |-- Order 1 (18,19)",
+    "    |   `-- Order 2 (20,21)",
+    "    `-- Closed (23,28)",
+    "        |-- Order 1 (24,25)",
+    "        `-- Order 2 (26,27)",
+  ],
+  rows: [
+    { node: "Root", left: 1, right: 30 },
+    { node: "Orders", left: 2, right: 15 },
+    { node: "EU", left: 3, right: 8 },
+    { node: "EU / Order 1", left: 4, right: 5 },
+    { node: "EU / Order 2", left: 6, right: 7 },
+    { node: "US", left: 9, right: 14 },
+    { node: "US / Order 1", left: 10, right: 11 },
+    { node: "US / Order 2", left: 12, right: 13 },
+    { node: "Returns", left: 16, right: 29 },
+    { node: "Open", left: 17, right: 22 },
+    { node: "Open / Order 1", left: 18, right: 19 },
+    { node: "Open / Order 2", left: 20, right: 21 },
+    { node: "Closed", left: 23, right: 28 },
+    { node: "Closed / Order 1", left: 24, right: 25 },
+    { node: "Closed / Order 2", left: 26, right: 27 },
+  ],
+  query: "SELECT node FROM order_tree WHERE `left` > 9 AND `right` < 14 ORDER BY `left`;",
+};
 
 const Projects = () => {
   return (
@@ -57,6 +96,65 @@ const Projects = () => {
               </div>
             </article>
           ))}
+        </div>
+        <div
+          className="mt-12 rounded-2xl border border-border bg-gradient-to-br from-background via-card to-muted/40 p-6 md:p-8 shadow-lg shadow-primary/5 opacity-0 animate-fade-in"
+          style={{ animationDelay: "0.4s" }}
+        >
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+            <div>
+              <p className="text-primary text-xs tracking-widest uppercase font-medium">
+                Case Study
+              </p>
+              <h3 className="font-serif text-2xl md:text-3xl font-medium text-heading">
+                {nestedSetExample.title}
+              </h3>
+              <p className="text-muted-foreground text-sm mt-2 max-w-xl">
+                {nestedSetExample.subtitle}
+              </p>
+            </div>
+            <span className="text-xs font-mono text-primary/80 bg-primary/10 px-3 py-1 rounded-full">
+              left / right indexes
+            </span>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-xl border border-border bg-background/80 p-4 md:p-5 shadow-sm">
+              <div className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
+                Tree view
+              </div>
+              <pre className="text-xs leading-relaxed font-mono text-foreground/80 whitespace-pre overflow-x-auto">
+                {nestedSetExample.tree.join("\n")}
+              </pre>
+            </div>
+            <div className="rounded-xl border border-border bg-background/80 p-4 md:p-5 shadow-sm">
+              <div className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
+                Index map
+              </div>
+              <div className="grid grid-cols-[minmax(0,1fr)_auto_auto] gap-3 text-xs font-mono text-muted-foreground px-2">
+                <span>Node</span>
+                <span>left</span>
+                <span>right</span>
+              </div>
+              <div className="mt-2 space-y-1 text-xs font-mono text-foreground/80">
+                {nestedSetExample.rows.map((row, rowIndex) => (
+                  <div
+                    key={row.node}
+                    className={`grid grid-cols-[minmax(0,1fr)_auto_auto] gap-3 rounded-md px-2 py-1 ${rowIndex % 2 === 0 ? "bg-muted/40" : "bg-transparent"}`}
+                  >
+                    <span>{row.node}</span>
+                    <span>{row.left}</span>
+                    <span>{row.right}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <p className="mt-4 text-xs text-muted-foreground">
+            Example query (descendants under US):{" "}
+            <code className="rounded bg-muted/60 px-2 py-1 font-mono text-[11px] text-foreground/80">
+              {nestedSetExample.query}
+            </code>
+          </p>
         </div>
       </div>
     </section>
