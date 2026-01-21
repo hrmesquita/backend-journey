@@ -1,7 +1,24 @@
+import { useEffect, useRef } from "react";
+import { createDraggable } from "animejs";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import { Github, Linkedin } from "lucide-react";
 
 const Hero = () => {
+  const avatarRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const target = avatarRef.current;
+    if (!target) return;
+
+    const draggable = createDraggable(target, {
+      container: [-24, 24, 24, -24],
+    });
+
+    return () => {
+      draggable.revert();
+    };
+  }, []);
+
   return (
     <section className="min-h-[85vh] flex items-center section-padding">
       <div className="container-narrow">
@@ -67,7 +84,12 @@ const Hero = () => {
           </div>
           
           <div className="order-1 md:order-2 opacity-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <div className="relative group">
+            <div className="relative group" ref={avatarRef}>
+              <div className="absolute -top-2 -right-2 pointer-events-none">
+                <span className="inline-flex items-center rounded-full border border-border/40 bg-background/60 px-1.5 py-0.5 text-[9px] font-medium text-muted-foreground/70 shadow-sm backdrop-blur-sm animate-pop-subtle whitespace-nowrap opacity-75">
+                  drag me!!
+                </span>
+              </div>
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/30 shadow-lg shadow-primary/10 mx-auto md:mx-0 transition-transform duration-500 group-hover:scale-105">
                 <img 
                   src={profilePhoto} 
