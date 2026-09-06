@@ -3,9 +3,19 @@ import { createTimeline } from "animejs";
 
 const experiences = [
   {
+    company: "MaioLabs",
+    role: "Software & AI Engineer",
+    period: "2026 - Present",
+    highlights: [
+      "Building the systems behind production AI, with backend architecture, security, reliability, and maintainability treated as first-class engineering concerns.",
+      "Working on multi-tenant architectures where data models, authentication, permissions, queries, and logging are designed around explicit tenant boundaries from the start.",
+      "Deepening focus on identity and access management, tenant isolation, and auditability for AI systems that serve multiple roles and handle sensitive data.",
+    ],
+  },
+  {
     company: "Indra via CodeWin",
     role: "Software Engineer",
-    period: "Jun 2024 - Present",
+    period: "Jun 2024 - 2026",
     highlights: [
       "Built backend services for a port logistics management platform using Java and Spring Boot, integrating external client APIs and exposing REST endpoints. Implemented end-to-end backend features, including data ingestion, transformation, persistence, and API design.",
       "Contributed to QA-driven release cycles with frequent deployments, prioritizing code readability, maintainability, and test coverage (>85%)",
