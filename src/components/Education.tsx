@@ -5,9 +5,19 @@ const education = [
     year: "2024",
   },
   {
+    title: "Cypher Fundamentals",
+    institution: "Neo4j",
+    year: "2023",
+  },
+  {
+    title: "Apache Kafka for Absolute Beginners",
+    institution: "Udemy",
+    year: "2023",
+  },
+  {
     title: "Cybersecurity 101",
     institution: "Code For All_",
-    year: "2023",
+    year: "2022",
   },
   {
     title: "Full Stack Programming Bootcamp",

@@ -1,22 +1,37 @@
-# Backend Portfolio
+# Backend Journey
 
-This project is a personal portfolio website focused on showcasing backend development expertise, projects, and skills.
+A personal portfolio for **Hugo Mesquita**, a Software & AI Engineer based in Porto, Portugal.
 
-## Technologies Used
+The site reflects my current work on the systems behind production AI: backend architecture, multi-tenant platforms, identity and access management, tenant isolation, auditability, reliability, and cloud-native delivery.
 
-- **Frontend Framework:** React with TypeScript
-- **Build Tool:** Vite
+## Current focus
+
+- Production AI systems and the backend infrastructure around them
+- Multi-tenant architecture and secure tenant boundaries
+- Identity and access management (IAM), permissions, and auditability
+- Distributed systems, microservices, and REST APIs
+- Performance, asynchronous processing, automated testing, and maintainability
+- Docker, Kubernetes, CI/CD, Nginx, and cloud deployment
+
+## Portfolio highlights
+
+- **MaioLabs** — Software & AI Engineer (2026 - Present)
+- **Indra via CodeWin** — Software Engineer (Jun 2024 - 2026)
+- **Critical TechWorks** — Software Engineer (Mar 2023 - Mar 2024)
+- **Secret Santa Hub** — Next.js + FastAPI application deployed with Docker, DigitalOcean, Nginx, Let's Encrypt, and GitHub Actions
+
+## Technologies used by this website
+
+- **Frontend:** React + TypeScript
+- **Build:** Vite
 - **Styling:** Tailwind CSS
-- **UI Components:** shadcn/ui (Radix UI)
+- **UI:** shadcn/ui + Radix UI
 - **Routing:** React Router
+- **Animation:** Anime.js
 - **Icons:** Lucide React
-- **State Management & Data Fetching:** TanStack Query (React Query)
+- **Data fetching:** TanStack Query
 
-## Why These Technologies?
+## Links
 
-- **React & TypeScript:** React allows for reusable components. TypeScript helps catch errors early and improves code quality.
-- **Vite:** Provides a fast development environment and optimized builds.
-- **Tailwind CSS:** Speeds up styling with utility classes and ensures a consistent design.
-- **shadcn/ui:** Offers high-quality, accessible, and customizable UI components.
-- **TanStack Query:** Handles data fetching and caching efficiently for a better user experience.
-- **Lucide React:** A clean icon set that fits well with the site's design.
+- LinkedIn: https://www.linkedin.com/in/hrainhamesquita/
+- GitHub: https://github.com/hrmesquita

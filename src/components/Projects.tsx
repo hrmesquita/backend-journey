@@ -2,8 +2,8 @@ const projects = [
   {
     title: "Secret Santa Hub",
     year: "2024",
-    description: "A platform for holiday celebrations or team activities gift-giving. Participants get matched and notified via email.",
-    tech: ["Next.js", "Python", "Email Integration"],
+    description: "A full-stack Secret Santa platform with participant matching, exclusions, and email notifications. The FastAPI backend is containerized with Docker, deployed on DigitalOcean behind Nginx with Let's Encrypt, and shipped through GitHub Actions CI/CD.",
+    tech: ["Next.js", "FastAPI", "Python", "Docker", "DigitalOcean", "Nginx", "GitHub Actions"],
   },
   {
     title: "Rust Web Scraper",

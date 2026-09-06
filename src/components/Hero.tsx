@@ -25,18 +25,18 @@ const Hero = () => {
         <div className="grid md:grid-cols-[1fr,auto] gap-12 md:gap-16 items-center">
           <div className="order-2 md:order-1 opacity-0 animate-fade-in">
             <p className="text-primary text-sm tracking-widest uppercase mb-4 font-medium">
-              Software Engineer
+              Software & AI Engineer
             </p>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-6">
               Hugo <span className="text-primary">Mesquita</span>
             </h1>
             <p className="text-foreground/80 text-lg md:text-xl leading-relaxed max-w-xl mb-8">
-              Backend engineer with ~3 years crafting high-performance distributed systems. 
-              I build microservices that scale and pipelines that don't break at 3am.
+              Software & AI Engineer working on the systems behind production AI.
+              I build backend platforms where architecture, security, and reliability matter as much as the model.
             </p>
             <p className="text-muted-foreground leading-relaxed max-w-xl mb-10">
-              Based in Porto, Portugal. Currently focused on Java-based architectures, 
-              system performance optimization, and cloud-native infrastructure.
+              Based in Porto, Portugal. Currently at MaioLabs, focused on production AI systems,
+              multi-tenant architecture, identity and access control, tenant isolation, and auditability.
             </p>
             <div className="flex flex-wrap items-center gap-6">
               <a 
