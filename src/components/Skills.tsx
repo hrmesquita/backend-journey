@@ -1,7 +1,11 @@
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["Java", "SQL", "JavaScript", "Python", "Go"],
+    skills: ["Java", "Python", "SQL", "JavaScript / TypeScript", "Go"],
+  },
+  {
+    title: "AI & Secure Platforms",
+    skills: ["Production AI Systems", "Multi-Tenant Architecture", "IAM", "Tenant Isolation", "Auditability"],
   },
   {
     title: "Backend & Architecture",
@@ -13,7 +17,7 @@ const skillCategories = [
   },
   {
     title: "DevOps & Cloud",
-    skills: ["Docker", "Kubernetes", "CI/CD", "Git", "SonarQube"],
+    skills: ["Docker", "Kubernetes", "GitHub Actions", "Jenkins", "Nginx", "DigitalOcean"],
   },
   {
     title: "Databases",
